@@ -1,11 +1,13 @@
 * {
   margin: 0;
+  font-family: avenir next;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
     overflow: hidden;
+    height: 50px;
 }
 
 /* Style the links inside the navigation bar */
@@ -14,7 +16,7 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -31,21 +33,6 @@
     color: white;
 }
 
-.stockitem {
-    background-color: white;
-    vertical-align: middle;
-    line-height: 50px;
-    width: 100%;
-    height: 50px;
-    border-bottom: 1px solid grey;
-    list-style-type: none;
-    margin-left: 0;
-}
-
-.stockitem:hover {
-    background-color: #C2E3F1;
-}
-
 #wrapper {
   width: 100%;
   background-color: #fff;
@@ -54,28 +41,93 @@
 #side-nav {
     position: fixed;
     width: 250px;
-    height:100vh;
+    height:calc(100vh - 50px);
     left: 0;
     right: 0;
     overflow-y: scroll;
-    top: 48px;
+    top: 50px;
+}
 
+#side-nav #trending_cell {
+    background-color: blue;
+    color: white;
+}
+
+#side-nav #trending_title {
+    margin-left: 1.3em;
 }
 
 #side-nav ul {
     margin: 0;
     padding: 0;
-
+    list-style-type: none;
 }
 
-#content-wrapper {
-    margin: 48px 0 0 250px;
+#side-nav li {
+    background-color: white;
+    vertical-align: middle;
+    line-height: 50px;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid grey;
+}
+
+#side-nav #a {
+}
+
+#side-nav #a:hover {
+    background-color: #C2E3F1;
+}
+
+#detail-wrapper {
+    margin-top: 50px;
+    margin-left: 250px;
     padding: 0 30px;
+
     overflow-y: scroll;
     position: fixed;
     left: 0;
     top: 0;
-    height:100vh;
-    width:auto;
+    height:calc(100vh - 50px);
+    width: calc(100vw - 310px);
+    min-width: 600px;
     background-color: white;
+
+}
+
+#detail-wrapper h1 {
+
+}
+
+#stocktitle-wrapper {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+#graph-wrapper {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+#article-wrapper {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 600px;
+}
+
+#article-wrapper ul {
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#article-wrapper li {
+    padding: 10px 0 10px 10px;
 }

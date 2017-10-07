@@ -2,77 +2,116 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Stocks</title>
+        <title>STOCKS</title>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+        <script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/misc.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
+      <script src="index.js"></script>
+      <style>
+        .bubbleChart {
+          min-width: 100px;
+          max-width: 700px;
+          height: 700px;
+          margin: 0 auto;
+        }
+        .bubbleChart svg{
+          background: #000000;
+        }
+  </style>
     </head>
     <body>
         <div class="topnav" id="myTopnav">
-          <a href="#home">Home</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+          <a href="#home">STOCKS</a>
         </div>
         <div id="wrapper">
             <div id="side-nav">
-                <ul>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                    <li class="stockitem">Thing</li>
-                </ul>
+                <div id="trending">
+                    <ul>
+                        <li id="trending_cell">
+                            <div>
+                              <div id="trending_title" style="display:inline-block;"><h3>TRENDING</h3></div>
+                              <div id="logo" style="display:inline-block;">
+                                <img src="trends.png" alt="hi">
+                              </div>
+                            </div>
+                        </li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                        <li id="a">Thing</li>
+                    </ul>
+                </div>
             </div>
-            <div id="content-wrapper">
-                APPLE
+
+            <div id="detail-wrapper">
+                <div id="stocktitle-wrapper">
+                    <h1>APPL</h1>
+                </div>
+                <div id="graph-wrapper">
+                    <div class="bubbleChart"/>
+                </div>
+                <div id="article-wrapper">
+                    <h3>ARTICLES</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.bloomberg.com/news/articles/2017-10-07/duke-posts-12-7-annual-gain-as-value-of-endowment-hits-record">
+                                Duke Posts 12.7% Annual Gain, Value of Endowment Hits Record - Bloomberg</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bloomberg.com/news/articles/2017-10-07/duke-posts-12-7-annual-gain-as-value-of-endowment-hits-record">
+                                Duke Posts 12.7% Annual Gain, Value of Endowment Hits Record - Bloomberg</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bloomberg.com/news/articles/2017-10-07/duke-posts-12-7-annual-gain-as-value-of-endowment-hits-record">
+                                Duke Posts 12.7% Annual Gain, Value of Endowment Hits Record - Bloomberg</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bloomberg.com/news/articles/2017-10-07/duke-posts-12-7-annual-gain-as-value-of-endowment-hits-record">
+                                Duke Posts 12.7% Annual Gain, Value of Endowment Hits Record - Bloomberg</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bloomberg.com/news/articles/2017-10-07/duke-posts-12-7-annual-gain-as-value-of-endowment-hits-record">
+                                Duke Posts 12.7% Annual Gain, Value of Endowment Hits Record - Bloomberg</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bloomberg.com/news/articles/2017-10-07/duke-posts-12-7-annual-gain-as-value-of-endowment-hits-record">
+                                Duke Posts 12.7% Annual Gain, Value of Endowment Hits Record - Bloomberg</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
