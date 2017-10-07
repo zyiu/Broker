@@ -5,7 +5,7 @@
         <title>STOCKS</title>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-        <script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script>
       <script src="http://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"></script>
       <script src="http://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"></script>
       <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"></script>
@@ -33,48 +33,135 @@
           <a href="#home">STOCKS</a>
         </div>
         <div id="wrapper">
-            <div id="side-nav">
-                <div id="trending">
-                    <ul>
-                        <li id="trending_cell">
-                            <div>
-                              <div id="trending_title" style="display:inline-block;"><h3>TRENDING</h3></div>
-                              <div id="logo" style="display:inline-block;">
-                                <img src="trends.png" alt="hi">
-                              </div>
-                            </div>
-                        </li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                        <li id="a">Thing</li>
-                    </ul>
-                </div>
-            </div>
+          <div id="side-nav">
+              <div id="pinned">
+                <ul>
+                    <li id="pinned_cell">
+                        <div>
+                          <div id="title_align" style="display:inline-block;"><h3>PINNED</h3></div>
+                          <div style="display:inline-block;">
+                            <img id="thumbtack_logo" src="assets/img/thumbtack.png" width="60" height="33">
+                          </div>
+                        </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>APPL</h4></div>
+                        <div id="rating" style="display:inline-block;"> +5 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>ADBE</h4></div>
+                        <div id="rating" style="display:inline-block;"> -3 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>NVDA</h4></div>
+                        <div id="rating" style="display:inline-block;"> +1 </div>
+                      </div>
+                    </li>
+                </ul>
+              </div>
+
+              <div id="trending">
+                <ul>
+                    <li id="trending_cell">
+                        <div>
+                          <div id="title_align" style="display:inline-block;"><h3>TRENDING</h3></div>
+                          <div style="display:inline-block;">
+                            <img id="trends_logo" src="assets/img/trends.png" width="33" height="33">
+                          </div>
+                        </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>MSFT</h4></div>
+                        <div id="rating" style="display:inline-block;"> +53 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>GRPN</h4></div>
+                        <div id="rating" style="display:inline-block;"> +12 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>FB</h4></div>
+                        <div id="rating" style="display:inline-block;"> +3 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>TSLA</h4></div>
+                        <div id="rating" style="display:inline-block;"> +70 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>NFLX</h4></div>
+                        <div id="rating" style="display:inline-block;"> +33 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>DIS</h4></div>
+                        <div id="rating" style="display:inline-block;"> +20 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>BABA</h4></div>
+                        <div id="rating" style="display:inline-block;"> +15 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>GE</h4></div>
+                        <div id="rating" style="display:inline-block;"> +25 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>AMZN</h4></div>
+                        <div id="rating" style="display:inline-block;"> +15 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>WDAY</h4></div>
+                        <div id="rating" style="display:inline-block;"> +17 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>CRM</h4></div>
+                        <div id="rating" style="display:inline-block;"> +60 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>AMD</h4></div>
+                        <div id="rating" style="display:inline-block;"> +13 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>ORCL</h4></div>
+                        <div id="rating" style="display:inline-block;"> +16 </div>
+                      </div>
+                    </li>
+                    <li class="normal_cell">
+                      <div>
+                        <div id="content_align" style="display:inline-block;"><h4>SAP</h4></div>
+                        <div id="rating" style="display:inline-block;"> +32 </div>
+                      </div>
+                    </li>
+                </ul>
+              </div>
+          </div>
 
             <div id="detail-wrapper">
                 <div id="stocktitle-wrapper">

@@ -69,14 +69,54 @@
     line-height: 50px;
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid grey;
 }
 
-#side-nav #a {
+#side-nav .normal_cell:nth-child(even) {
+  background: #DCDCDC;
+  font-weight: bold;
 }
 
-#side-nav #a:hover {
+#side-nav .normal_cell:nth-child(odd) {
+  background: #F8F8F8;
+  font-weight: bold;
+}
+
+#side-nav .normal_cell:hover {
     background-color: #C2E3F1;
+}
+
+#side-nav #trending_cell {
+    background-color: #0080ff;
+    color: white;
+}
+
+#side-nav #pinned_cell {
+    background-color: #104E8B;
+    color: white;
+}
+
+#side-nav #title_align {
+  margin-left: 1.3em;
+}
+
+#side-nav #trends_logo {
+    margin-left: 4.7em;
+    vertical-align: middle;
+}
+
+#side-nav #thumbtack_logo {
+    margin-left: 5.5em;
+    vertical-align: middle;
+}
+
+#side-nav #content_align {
+  float: left;
+  margin-left: 1.3em;
+}
+
+#side-nav #rating {
+  float: right;
+  margin-right: 1.3em;
 }
 
 #detail-wrapper {
