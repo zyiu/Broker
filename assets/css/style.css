@@ -97,16 +97,29 @@
 
 #side-nav #title_align {
   margin-left: 1.3em;
+  float: left;
 }
 
 #side-nav #trends_logo {
-    margin-left: 4.7em;
-    vertical-align: middle;
+  margin-right: 1.1em;
+  float: right;
+}
+
+#side-nav #trends_logo img {
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
 }
 
 #side-nav #thumbtack_logo {
-    margin-left: 5.5em;
-    vertical-align: middle;
+    margin-right: 0.2em;
+    float: right;
+}
+
+#side-nav #thumbtack_logo img{
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
 }
 
 #side-nav #content_align {
