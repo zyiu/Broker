@@ -16,6 +16,7 @@
       <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"></script>
       <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
       <script src="index.js"></script>
+      <script src="assets/jquery/jquery.js"></script>
       <style>
         .bubbleChart {
           min-width: 100px;
@@ -36,7 +37,7 @@
           <div id="side-nav">
               <div id="pinned">
                 <ul>
-                    <li id="pinned_cell">
+                    <li class="pinned_show_hide" id="pinned_cell">
                         <div>
                           <div id="title_align" style="display:inline-block;"><h3>PINNED</h3></div>
                           <div id="thumbtack_logo" style="display:inline-block;">
@@ -47,19 +48,19 @@
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>APPL</h4></div>
-                        <div id="rating" style="display:inline-block;"> +5 </div>
+                        <div class="rating" style="display:inline-block;"> +5 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>ADBE</h4></div>
-                        <div id="rating" style="display:inline-block;"> -3 </div>
+                        <div class="rating" style="display:inline-block;"> -3 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>NVDA</h4></div>
-                        <div id="rating" style="display:inline-block;"> +1 </div>
+                        <div class="rating" style="display:inline-block;"> +1 </div>
                       </div>
                     </li>
                 </ul>
@@ -67,7 +68,7 @@
 
               <div id="trending">
                 <ul>
-                    <li id="trending_cell">
+                    <li class="trending_show_hide" id="trending_cell">
                         <div>
                           <div id="title_align" style="display:inline-block;"><h3>TRENDING</h3></div>
                           <div id="trends_logo" style="display:inline-block;">
@@ -78,85 +79,85 @@
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>MSFT</h4></div>
-                        <div id="rating" style="display:inline-block;"> +53 </div>
+                        <div class="rating" style="display:inline-block;"> +53 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>GRPN</h4></div>
-                        <div id="rating" style="display:inline-block;"> +12 </div>
+                        <div class="rating" style="display:inline-block;"> +12 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>FB</h4></div>
-                        <div id="rating" style="display:inline-block;"> +3 </div>
+                        <div class="rating" style="display:inline-block;"> +3 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>TSLA</h4></div>
-                        <div id="rating" style="display:inline-block;"> +70 </div>
+                        <div class="rating" style="display:inline-block;"> +70 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>NFLX</h4></div>
-                        <div id="rating" style="display:inline-block;"> +33 </div>
+                        <div class="rating" style="display:inline-block;"> +33 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>DIS</h4></div>
-                        <div id="rating" style="display:inline-block;"> +20 </div>
+                        <div class="rating" style="display:inline-block;"> +20 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>BABA</h4></div>
-                        <div id="rating" style="display:inline-block;"> +15 </div>
+                        <div class="rating" style="display:inline-block;"> +15 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>GE</h4></div>
-                        <div id="rating" style="display:inline-block;"> +25 </div>
+                        <div class="rating" style="display:inline-block;"> +25 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>AMZN</h4></div>
-                        <div id="rating" style="display:inline-block;"> +15 </div>
+                        <div class="rating" style="display:inline-block;"> +15 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>WDAY</h4></div>
-                        <div id="rating" style="display:inline-block;"> +17 </div>
+                        <div class="rating" style="display:inline-block;"> +17 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>CRM</h4></div>
-                        <div id="rating" style="display:inline-block;"> +60 </div>
+                        <div class="rating" style="display:inline-block;"> +60 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>AMD</h4></div>
-                        <div id="rating" style="display:inline-block;"> +13 </div>
+                        <div class="rating" style="display:inline-block;"> +13 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>ORCL</h4></div>
-                        <div id="rating" style="display:inline-block;"> +16 </div>
+                        <div class="rating" style="display:inline-block;"> +16 </div>
                       </div>
                     </li>
                     <li class="normal_cell">
                       <div>
                         <div id="content_align" style="display:inline-block;"><h4>SAP</h4></div>
-                        <div id="rating" style="display:inline-block;"> +32 </div>
+                        <div class="rating" style="display:inline-block;"> +32 </div>
                       </div>
                     </li>
                 </ul>
@@ -165,7 +166,7 @@
 
             <div id="detail-wrapper">
                 <div id="stocktitle-wrapper">
-                    <h1>APPL</h1>
+                    <h1 id="stocktitle">WELCOME</h1>
                 </div>
                 <div id="graph-wrapper">
                     <div class="bubbleChart"/>

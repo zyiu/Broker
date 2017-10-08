@@ -33,6 +33,14 @@
     color: white;
 }
 
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
 #wrapper {
   width: 100%;
   background-color: #fff;
@@ -127,7 +135,7 @@
   margin-left: 1.3em;
 }
 
-#side-nav #rating {
+#side-nav .rating {
   float: right;
   margin-right: 1.3em;
 }

@@ -1,13 +1,17 @@
 $(document).ready(function() {
-  var value = parseInt($("#rating").text().trim());
-  var color = 'red';
-  if (!isNaN(value)) {
-    if (value < 0) {
-      color = 'red';
-    }
-    if (value > 0) {
-      color = 'green';
-    }
-    $('#rating').css('color', color);
-  }
+    $('.rating').each(function() {
+        var value = parseInt($(this).text().trim());
+        if (!isNaN(value)) {
+          if (value < 0) {
+            $(this).addClass('red');
+          }
+          if (value > 0) {
+            $(this).addClass('green');
+          }
+        }
+    });
+
+    $('.normal_cell').click(function() {
+        $('#stocktitle').text($(this).text());
+    });
 });
