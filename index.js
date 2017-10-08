@@ -13,15 +13,15 @@ $(document).ready(function () {
     //circleColor: use @default
     data: {
       items: [
-        {text: "Increase", count: "236"},
-        {text: "Impressive", count: "382"},
-        {text: "Slump", count: "170"},
-        {text: "Good", count: "123"},
-        {text: "Fall", count: "12"},
-        {text: "Bad", count: "170"},
-        {text: "Skyrocket", count: "382"},
-        {text: "Decrease", count: "10"},
-        {text: "Something", count: "170"},
+        {text: "Surged", count: "6"},
+        {text: "Popped", count: "4"},
+        {text: "Slump", count: "1"},
+        {text: "Climb", count: "5"},
+        {text: "Fall", count: "3"},
+        {text: "Tumbled", count: "2"},
+        {text: "Skyrocket", count: "1"},
+        {text: "Plunged", count: "4"},
+        {text: "Dropped", count: "9"},
       ],
       eval: function (item) {return item.count;},
       classed: function (item) {return item.text.split(" ").join("");}
