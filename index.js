@@ -13,38 +13,20 @@ $(document).ready(function () {
     //circleColor: use @default
     data: {
       items: [
-        {text: "Java", count: "236"},
-        {text: ".Net", count: "382"},
-        {text: "Php", count: "170"},
-        {text: "Ruby", count: "123"},
-        {text: "D", count: "12"},
-        {text: "Python", count: "170"},
-        {text: "C/C++", count: "382"},
-        {text: "Pascal", count: "10"},
+        {text: "Increase", count: "236"},
+        {text: "Impressive", count: "382"},
+        {text: "Slump", count: "170"},
+        {text: "Good", count: "123"},
+        {text: "Fall", count: "12"},
+        {text: "Bad", count: "170"},
+        {text: "Skyrocket", count: "382"},
+        {text: "Decrease", count: "10"},
         {text: "Something", count: "170"},
       ],
       eval: function (item) {return item.count;},
       classed: function (item) {return item.text.split(" ").join("");}
     },
     plugins: [
-      {
-        name: "central-click",
-        options: {
-          text: "(See more detail)",
-          style: {
-            "font-size": "12px",
-            "font-style": "italic",
-            "font-family": "Source Sans Pro, sans-serif",
-            //"font-weight": "700",
-            "text-anchor": "middle",
-            "fill": "white"
-          },
-          attr: {dy: "65px"},
-          centralClick: function() {
-            alert("Here is more details!!");
-          }
-        }
-      },
       {
         name: "lines",
         options: {
