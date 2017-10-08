@@ -14,4 +14,16 @@ $(document).ready(function() {
     $('.normal_cell').click(function() {
         $('#stocktitle').text($(this).text());
     });
+
+    $('.pinned_show_hide').on("click", function() {
+      $('div#pinned ul li:gt(0)').slideToggle();
+    })
+
+    $('.trending_show_hide').on("click", function() {
+      $('div#trending ul li:gt(0)').slideToggle();
+    })
+
+    $('.slump_show_hide').on("click", function() {
+      $('div#slump ul li:gt(0)').slideToggle();
+    })
 });

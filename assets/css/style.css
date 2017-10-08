@@ -98,6 +98,11 @@
     color: white;
 }
 
+#side-nav #slump_cell {
+    background-color: #ff4c4c;
+    color: white;
+}
+
 #side-nav #pinned_cell {
     background-color: #104E8B;
     color: white;
@@ -108,12 +113,12 @@
   float: left;
 }
 
-#side-nav #trends_logo {
+#side-nav #arrow_logo {
   margin-right: 1.1em;
   float: right;
 }
 
-#side-nav #trends_logo img {
+#side-nav #arrow_logo img {
   margin-top: auto;
   margin-bottom: auto;
   vertical-align: middle;
@@ -138,6 +143,14 @@
 #side-nav .rating {
   float: right;
   margin-right: 1.3em;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
 }
 
 #detail-wrapper {
