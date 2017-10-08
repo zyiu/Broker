@@ -43,10 +43,12 @@ $(document).ready(function() {
         });
 
         $('.normal_cell').click(function() {
+            $('#graph-wrapper').html('');
             $('#article-wrapper ul').html('');
             name = $(this).find('h4').text();
             score = $(this).find('.rating').text();
             $('#stocktitle').text(name+' '+score);
+            var kvArray = [];
             $.getJSON('stockinfo.json', function(data) {
                 //var dict = JSON.parse(data.name.value);
                 //var negs = dict.key
@@ -62,20 +64,91 @@ $(document).ready(function() {
                         //console.log("hello")
                         $.each(value, function(key, value){
                             $.each(value, function(key, value){
-
                                 if (score > 0 && key == 'positiveArticles') {
                                     //console.log(value);
                                     $.each(value, function(i, val){
                                         $('#article-wrapper ul').append('<li><a href='+val+'>'+val+'</a></li>');
                                     });
-
                                 }
                                 if (score < 0 && key == 'negativeArticles') {
                                     $.each(value, function(i, val){
                                         $('#article-wrapper ul').append('<li><a href='+val+'>'+val+'</a></li>');
                                     });
                                 }
+                                if (key == 'positiveWords') {
+                                    //console.log(value);
+                                    $.each(value, function(i, val){
+                                        kvArray.push({text: val, count: "1"})
+                                    });
+                                }
+                                if (key == 'negativeWords') {
+                                    //console.log(value);
+                                    $.each(value, function(i, val){
+                                        kvArray.push({text: val, count: "1"})
+                                    });
+                                }
                             });
+                        });
+
+                        $('#graph-wrapper').append('<div class="bubbleChart"></div>');
+                        var bubbleChart = new d3.svg.BubbleChart({
+                          supportResponsive: true,
+                          size: 600,
+                          innerRadius: 600 / 3.5,
+                          radiusMin: 50,
+                          data: {
+                            items: kvArray,
+                            eval: function (item) {return item.count;},
+                            classed: function (item) {return item.text.split(" ").join("");}
+                          },
+                          plugins: [
+                            {
+                              name: "lines",
+                              options: {
+                                format: [
+                                  {// Line #0
+                                    textField: "count",
+                                    classed: {count: true},
+                                    style: {
+                                      "font-size": "28px",
+                                      "font-family": "Source Sans Pro, sans-serif",
+                                      "text-anchor": "middle",
+                                      fill: "white"
+                                    },
+                                    attr: {
+                                      dy: "0px",
+                                      x: function (d) {return d.cx;},
+                                      y: function (d) {return d.cy;}
+                                    }
+                                  },
+                                  {// Line #1
+                                    textField: "text",
+                                    classed: {text: true},
+                                    style: {
+                                      "font-size": "14px",
+                                      "font-family": "Source Sans Pro, sans-serif",
+                                      "text-anchor": "middle",
+                                      fill: "white"
+                                    },
+                                    attr: {
+                                      dy: "20px",
+                                      x: function (d) {return d.cx;},
+                                      y: function (d) {return d.cy;}
+                                    }
+                                  }
+                                ],
+                                centralFormat: [
+                                  {// Line #0
+                                    style: {"font-size": "50px"},
+                                    attr: {}
+                                  },
+                                  {// Line #1
+                                    style: {"font-size": "30px"},
+                                    attr: {dy: "40px"}
+                                  }
+                                ]
+                              }
+                            }]
                         });
                         return false;
                     }
@@ -98,8 +171,9 @@ $(document).ready(function() {
     });
 
     $('#home').click(function() {
-        $('#stocktitle').text('Welcome');
-        $('#article-wrapper ul').html('');    
+        $('#stocktitle').text('WELCOME');
+        $('#article-wrapper ul').html('');
+        $('#graph-wrapper').html('');
     });
 
 
